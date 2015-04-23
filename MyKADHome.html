@@ -1,0 +1,266 @@
+<html>
+<body>
+ <script src="MyKADandMykid.js"></script>
+
+<object id="webcard" type="application/x-webcard" width="0" height="0">
+  <param name="onload" value="pluginLoaded" />
+</object>
+
+<p>
+<div id = "Mydiv" name="Mydiv">
+<p align="center"><b> Please Insert Card into Card Reader </b></p> 
+</div>
+<div id = "progressDiv" name="progressDiv" style="display:none">
+<p align="center"><b> Please wait while getting data... </b></p> 
+</div>
+  <div id = "myKADdiv" name="myKADdiv">
+  <!-- if(mykadFlag = "true" && mykidFlag = "false"){ -->
+  <table width="971" border="1">
+  
+  <!--<tr>
+    <td><input name="SysMesg" type="text" id="SysMesg" size="50"></td>
+    <td colspan="1"><div align="center">
+      <input type="button" onClick="ReadMyKad()" value="Read MyKad" />
+      <input type="button" onClick="VerifyFP(1)" value="Verify MyKad" />
+      <input type="button" onClick="VerifyFPLeft(1)" value="Verify Left MyKad" />
+      <input type="button" onClick="VerifyFPRight(1)" value="Verify Right MyKad" />
+    </div></td>
+  </tr> -->
+
+  <tr>
+    <td>Photo</td>
+    <td width="270">
+	<input type="image" name="base64Photo" id="base64Photo" src=""  width="150" height="200">
+    </td>
+  </tr>
+
+  <tr>
+    <td>Address1</td>
+    <td><input name="JPN_Address1" type="text" id="JPN_Address1" size="50"></td>
+  </tr>
+  <tr>
+    <td>Address2</td>
+    <td><input name="JPN_Address2" type="text" id="JPN_Address2" size="50"></td>
+  </tr>
+  <tr>
+    <td>Address3</td>
+    <td><input name="JPN_Address3" type="text" id="JPN_Address3" size="50"></td>
+  </tr>
+  <tr>
+    <td>BirthDate</td>
+    <td><input name="JPN_BirthDate" type="text" id="JPN_BirthDate" size="50"></td>
+  </tr>
+  <tr>
+    <td>BirthPlace</td>
+    <td><input name="JPN_BirthPlace" type="text" id="JPN_BirthPlace" size="50"></td>
+  </tr>
+  <tr>
+    <td>CardVer</td>
+    <td><input name="JPN_CardVer" type="text" id="JPN_CardVer" size="50"></td>
+  </tr>
+  <tr>
+    <td>Category</td>
+    <td><input name="JPN_Category" type="text" id="JPN_Category" size="50"></td>
+  </tr>
+  <tr>
+    <td>Citizenship</td>
+    <td><input name="JPN_Citizenship" type="text" id="JPN_Citizenship" size="50"></td>
+  </tr>
+  <tr>
+    <td>City</td>
+    <td><input name="JPN_City" type="text" id="JPN_City" size="50"></td>
+  </tr>
+  <tr>
+    <td>DateIssued</td>
+    <td><input name="JPN_DateIssued" type="text" id="JPN_DateIssued" size="50"></td>
+  </tr>
+  <tr>
+    <td>EastMsian</td>
+    <td><input name="JPN_EastMsian" type="text" id="JPN_EastMsian" size="50"></td>
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td><input name="JPN_Gender" type="text" id="JPN_Gender" size="50"></td>
+  </tr>
+  <tr>
+    <td>GMPCName</td>
+    <td><input name="JPN_GMPCName" type="text" id="JPN_GMPCName" size="50"></td>
+  </tr>
+  <tr>
+    <td>GreenCardExpiry</td>
+    <td><input name="JPN_GreenCardExpiry" type="text" id="JPN_GreenCardExpiry" size="50"></td>
+  </tr>
+  <tr>
+    <td>GreenCardNationality</td>
+    <td><input name="JPN_GreenCardNationality" type="text" id="JPN_GreenCardNationality" size="50"></td>
+  </tr>
+  <tr>
+    <td>IDNum</td>
+    <td><input name="JPN_IDNum" type="text" id="JPN_IDNum" size="50"></td>
+  </tr>
+  <tr>
+    <td>KPTName</td>
+    <td><input name="JPN_KPTName" type="text" id="JPN_KPTName" size="50"></td>
+  </tr>
+  <tr>
+    <td>KT</td>
+    <td><input name="JPN_KT" type="text" id="JPN_KT" size="50"></td>
+  </tr>
+  <tr>
+    <td>OldIDNum</td>
+    <td><input name="JPN_OldIDNum" type="text" id="JPN_OldIDNum" size="50"></td>
+  </tr>
+  <tr>
+    <td>OrgName</td>
+    <td><input name="JPN_OrgName" type="text" id="JPN_OrgName" size="50"></td>
+  </tr>
+  <tr>
+    <td>OtherID</td>
+    <td><input name="JPN_OtherID" type="text" id="JPN_OtherID" size="50"></td>
+  </tr>
+  <tr>
+    <td>Postcode</td>
+    <td><input name="JPN_Postcode" type="text" id="JPN_Postcode" size="50"></td>
+  </tr>
+  <tr>
+    <td>Race</td>
+    <td><input name="JPN_Race" type="text" id="JPN_Race" size="50"></td>
+  </tr>
+  <tr>
+    <td>Religion</td>
+    <td><input name="JPN_Religion" type="text" id="JPN_Religion" size="50"></td>
+  </tr>
+  <tr>
+    <td>RJ</td>
+    <td><input name="JPN_RJ" type="text" id="JPN_RJ" size="50"></td>
+  </tr>
+  <tr>
+    <td>State</td>
+    <td><input name="JPN_State" type="text" id="JPN_State" size="50"></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+  <!-- } --> 
+  </div>
+  <div id= "myKIDdiv" name= "myKIDdiv">
+  <!-- else if(mykadFlag = "false" && mykidFlag = "true"){ -->
+  <table width="971" border="1">
+  
+  <!--<tr>
+    <td><input name="SysMesg" type="text" id="SysMesg" size="50"></td>
+    <td colspan="1"><div align="center">
+      <input type="button" onClick="ReadMyKad()" value="Read MyKad" />
+      <input type="button" onClick="VerifyFP(1)" value="Verify MyKad" />
+      <input type="button" onClick="VerifyFPLeft(1)" value="Verify Left MyKad" />
+      <input type="button" onClick="VerifyFPRight(1)" value="Verify Right MyKad" />
+    </div></td>
+  </tr>-->
+
+<tr>
+    <td>Name</td>
+    <td><input name="JPN_Kid_Name" type="text" id="JPN_Kid_Name" size="50"></td>
+  </tr>
+  <tr>
+    <td>BirthCertNo</td>
+    <td><input name="JPN_Kid_Birth_Cert_No" type="text" id="JPN_Kid_Birth_Cert_No" size="50"></td>
+  </tr>
+  <tr>
+    <td>IC Number</td>
+    <td><input name="JPN_KID_IC_No" type="text" id="JPN_KID_IC_No" size="50"></td>
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td><input name="JPN_Kid_Gender" type="text" id="JPN_Kid_Gender" size="50"></td>
+  </tr>
+   <tr>
+    <td>BirthPlace</td>
+    <td><input name="JPN_Kid_BirthPlace" type="text" id="JPN_Kid_BirthPlace" size="50"></td>
+  </tr>
+  <tr>
+    <td>BirthDate</td>
+    <td><input name="JPN_Kid_BirthDate" type="text" id="JPN_Kid_BirthDate" size="50"></td>
+  </tr>
+  <tr>
+    <td>Citizenship</td>
+    <td><input name="JPN_Kid_Citizenship" type="text" id="JPN_Kid_Citizenship" size="50"></td>
+  </tr>
+  <tr>
+    <td>Father ID</td>
+    <td><input name="JPN_Kid_Father_ID" type="text" id="JPN_Kid_Father_ID" size="50"></td>
+  </tr>
+  <tr>
+    <td>FatherName</td>
+    <td><input name="JPN_Kid_Father_Name" type="text" id="JPN_Kid_Father_Name" size="50"></td>
+  </tr>
+  <tr>
+    <td>FatherRace</td>
+    <td><input name="JPN_Kid_Father_Race" type="text" id="JPN_Kid_Father_Race" size="50"></td>
+  </tr>
+  <tr>
+    <td>FatherCitizenship</td>
+    <td><input name="JPN_Kid_Father_Citizenship" type="text" id="JPN_Kid_Father_Citizenship" size="50"></td>
+  </tr>
+  <tr>
+    <td>FatherReligion</td>
+    <td><input name="JPN_Kid_Father_Religion" type="text" id="JPN_Kid_Father_Religion" size="50"></td>
+  </tr>
+  <tr>
+    <td>Mother ID</td>
+    <td><input name="JPN_Kid_Mother_ID" type="text" id="JPN_Kid_Mother_ID" size="50"></td>
+  </tr>
+  <tr>
+    <td>MotherName</td>
+    <td><input name="JPN_Mother_Name" type="text" id="JPN_Mother_Name" size="50"></td>
+  </tr>
+  <tr>
+    <td>MotherRace</td>
+    <td><input name="JPN_Kid_Mother_Race" type="text" id="JPN_Kid_Mother_Race" size="50"></td>
+  </tr>
+  <tr>
+    <td>MotherCitizenship</td>
+    <td><input name="JPN_Kid_Mother_Citizenship" type="text" id="JPN_Kid_Mother_Citizenship" size="50"></td>
+  </tr>
+  <tr>
+    <td>MotherReligion</td>
+    <td><input name="JPN_Kid_Mother_Religion" type="text" id="JPN_Kid_Mother_Religion" size="50"></td>
+  </tr>
+  <tr>
+    <td>Address1</td>
+    <td><input name="JPN_Kid_Address1" type="text" id="JPN_Kid_Address1" size="50"></td>
+  </tr>
+  <tr>
+    <td>Address2</td>
+    <td><input name="JPN_Kid_Address2" type="text" id="JPN_Kid_Address2" size="50"></td>
+  </tr>
+  <tr>
+    <td>Address3</td>
+    <td><input name="JPN_Kid_Address3" type="text" id="JPN_Kid_Address3" size="50"></td>
+  </tr>
+  <tr>
+    <td>Postcode</td>
+    <td><input name="JPN_Kid_Postcode" type="text" id="JPN_Kid_Postcode" size="50"></td>
+  </tr>
+  <tr>
+    <td>City</td>
+    <td><input name="JPN_Kid_City" type="text" id="JPN_Kid_City" size="50"></td>
+  </tr>
+ <tr>
+    <td>State</td>
+    <td><input name="JPN_Kid_State" type="text" id="JPN_Kid_State" size="50"></td>
+  </tr>
+  <tr>
+    <td>Version</td>
+    <td><input name="JPN_Kid_Version" type="text" id="JPN_Kid_Version" size="50"></td>
+  </tr>
+  
+</table>
+
+<p>&nbsp;</p>
+  
+  <!-- } -->
+   </div>
+</p>
+
+</body>
+</html> 
+	
