@@ -551,8 +551,13 @@ document.getElementById('Mydiv').style.display = 'none';
 function hideMykidDiv(){
 document.getElementById('myKIDdiv').style.display = 'none';
 }
-function trimAllSpace(str) {
+function trimAllSpaces(str) {
     return str.replace(/^\s\s*/, '')     // Remove Preceding white space
               .replace(/\s\s*$/, '')     // Remove Trailing white space
               .replace(/([\s]+)/g, '');  // Replace remaining white space with dashes
+}
+function trimExtraSpaces(str) {
+    return str.replace(/(^\s*)|(\s*$)/gi,"")
+              .replace(/[ ]{2,}/gi," ")
+              .replace(/\n /,"\n");
 }
